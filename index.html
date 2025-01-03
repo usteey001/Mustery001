@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musteey001 Data and VTU Subscription</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Musteey001 Data and VTU Subscription</h1>
+<form id="subscription-form">
+<label for="network">Select Network:</label>
+<select id="network" name="network" onchange="showPlans(this.value)">
+<option value="GLO">GLO</option>
+<option value="Airtel">Airtel</option>
+<option value="MTN">MTN</option>
+</select>
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone">
+<label for="plan">Subscription Plan:</label>
+<select id="plan" name="plan">
+</select>
+<button type="submit">Subscribe</button>
+<button type="button" onclick="airtimeTopUp()">Airtime Top Up</button>
+</form>
+<div id="success-message"></div>
+</div>
+<script>
+function showPlans(network) {
+var plans = document.getElementById("plan");
+plans.innerHTML = "";
+if (network == "GLO") {
+plans.innerHTML += "<option value='GLO SME 500MB for N175'>GLO SME 500MB for N175 Monthly</option>";
+plans.innerHTML += "<option value='GLO SME 1GB for N300'>GLO SME 1GB for N300 Monthly</option>";
+plans.innerHTML += "<option value='GLO SME 2GB for N550'>GLO SME 2GB for N550 Monthly</option>";
+plans.innerHTML += "<option value='GLO SME 3GB for N800'>GLO SME 3GB for N800 Monthly</option>";
+plans.innerHTML += "<option value='GLO SME 4GB for N1,050'>GLO SME 4GB for N1,050 Monthly</option>";
+plans.innerHTML += "<option value='GLO SME 5GB for N1,300'>GLO SME 5GB for N1,300 Monthly</option>";
+plans.innerHTML += "<option value='GLO SME 10GB for N2,550'>GLO SME 10GB for N2,550 Monthly</option>";
+} else if (network == "Airtel") {
+plans.innerHTML += "<option value='Airtel SME 500MB for N135'>Airtel SME 500MB for N135 Monthly</option>";
+plans.innerHTML += "<option value='Airtel SME 1GB for N260'>Airtel SME 1GB for N260 Monthly</option>";
+plans.innerHTML += "<option value='Airtel SME 2GB for N510'>Airtel SME 2GB for N510 Monthly</option>";
+plans.innerHTML += "<option value='Airtel SME 3GB for N760'>Airtel SME 3GB for N760 Monthly</option>";
+plans.innerHTML += "<option value='Airtel SME 4GB for N1,010'>Airtel SME 4GB for N1,010 Monthly</option>";
+plans.innerHTML += "<option value='Airtel SME 5GB for N1,260'>Airtel SME 5GB for N1,260 Monthly</option>";
+plans.innerHTML += "<option value='Airtel SME 10GB for N2,510'>Airtel SME 10GB for N2,510 Monthly</option>";
+} else if (network == "MTN") {
+plans.innerHTML += "<option value='MTN SME 500MB for N125'>MTN SME 500MB for N125 Monthly</option>";
+plans.innerHTML += "<option value='MTN SME 1GB for N250'>MTN SME 1GB for N250 Monthly</option>";
+plans.innerHTML += "<option value='MTN SME 2GB for N500'>MTN SME 2GB for N500 Monthly</option>";
+plans.innerHTML += "<option value='MTN SME 3GB for N750'>MTN SME 3GB for N750 Monthly</option>";
+plans.innerHTML += "<option value='MTN SME 4GB for N1,000'>MTN SME 4GB for N1,000 Monthly</option>";
+plans.innerHTML += "<option value='MTN SME 5GB for N1,250'>MTN SME 5GB for N1,250 Monthly</option>";
+plans.innerHTML += "<option value='MTN SME 10GB for N2,500'>MTN SME 10GB for N2,500 Monthly</option>";
+}
+}
+function airtimeTopUp() {
+// Add functionality for airtime top up here
+alert("Airtime Top Up feature is coming soon!");
+}
+</script>
+<
